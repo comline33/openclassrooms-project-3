@@ -1,0 +1,26 @@
+@use './variables/variables.scss'as *;// import variables 
+.footer{
+    @extend %main-flex;
+    gap: 16px;
+    padding: 22px 22px;
+    background-color:#353535;
+    align-items: flex-start;
+    color: white;
+    .logo-footer{
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .footer-list{
+        width: 100%;
+        line-height: 24px;
+        font-size: 14px;
+        font-weight: 500;
+        li{
+            display: inline-flex;
+            width: 90%;
+        }
+        .icon-footer{
+            margin-right: 8px;
+        }
+    }
+}

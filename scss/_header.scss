@@ -1,0 +1,16 @@
+
+@use './variables/variables.scss'as *;// import variables 
+@use'./global-layout';
+header{
+    @extend %main-flex;// make a div in order column flex  
+    height: 63px;
+    justify-content: center;
+    align-items: center;
+    gap: -0.5px;
+    text-align: center;
+    padding: 14px 89px 13px 89px;
+    box-shadow: $main-box-shadow;
+    .logo{
+        align-items: center;
+    }
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ohmyfood-home</title>
+    <title>Booki</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
@@ -20,93 +20,81 @@
 </head>
 <body>
     <header>
-        <div class="logo .first-title">
+        <div class="logo logo-font">
             <h1 class="logo-font">ohmyfood</h1>
         </div>
     </header>
-    <section class="main-container">
-        <section class="reservation-bloc">
-            <div class="location-form">
-                <form class="form" method="post">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <input type ="search" id="search-word" class="search" placeholder="Paris, belleville">
-                </form>
-            </div>
-            <h2 class="title-home">Réservez le menu qui vous convient</h2>
-            <p class="text-home">Découvrez des restaurants d’exception,<br> 
-                sélectionnés par nos soins.</p>
-            <button class="btn btn-reservation">Explorer nos restaurants</button>
-        </section>
-        <section class="filters-bloc">
-            <h2 class="title-bloc">Fonctionnement</h2>
-            <div class="filter-box">
-                <i class="fa-solid fa-mobile-screen-button"></i>
-                <h3>Choisissez un restaurant</h3>
-            </div>
-            <div class="filter-box">
-                <i class="fa-solid fa-list-ul"></i>
-                <h3>Composez votre menu</h3>
-            </div>
-            <div class="filter-box">
-                <i class="fa-solid fa-store fa-color"></i>
-                <h3>Dégustez au restaurant</h3>
-            </div>
-        </section>
-        <section class="favorate-menu">
-            <h2 class="title-bloc">Restaurants</h2>
-            <div class="card-box">
-                <article class="card-menu card">
-                    <a href="#">
-                        <img src="./images/restaurants/La-palette-du-gout.jpg" 
-                        alt="Image d'un plat montrant le menu  La palette du goût">
-                        <div class="card-content">
+    <section class=" card-box-menu">
+        <article class="card-menu-command">
+            <a href="#">
+                <div class="img-card-menu">
+                    <img src="./images/restaurants/La-palette-du-gout.jpg" 
+                    alt="Image d'un plat montrant le menu  La palette du goût">
+                </div>
+                <div class="card-content-plat">
+                    <h1 class="first-title">La palette du goût</h1>
+                    <div class="card-plat">
+                        <h3 class="card-title">Entrées</h3>
+                        <a href="">  
                             <div class="card-txt">
-                                <h3 class="card-title">La palette du goût</h3>
-                                <p class="sub-title">Ménilmontant</p>
+                                <div class="rectangle">
+                                    <h4 class="name-plat">Fricassée d'escargots</h4>
+                                    <p class="detail-plat">Au piment d'Espelette<span>25€</span></p>
+                                </div>
+                                <div class="rectangle">
+                                    <h4 class="name-plat">Foie gras de canard mi-cuit</h4>
+                                    <p class="detail-plat">Et ses copeaux de truffe noire<span>35€</span></p>
+                                </div>
+                                <div class="rectangle">
+                                    <h4 class="name-plat">Œuf au plats</h4>
+                                    <p class="detail-plat">Assaisonné à la truffe sur lit de caviar<span>20€</span></p>
+                                    
+                                </div>
                             </div>
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                    </a>
-                </article>
-                <article class="card">
-                    <a href="">
-                        <img src="./images/restaurants/La-note-enchantee.jpg" alt="Image d'un plat montrant le menu  La noteenchantée">
-                        <div class="card-content">
+                        </a>
+                    </div>
+                    <div class="card-plat">
+                        <h3 class="card-title">Plats</h3>
+                        <a href="">  
                             <div class="card-txt">
-                                <h3 class="card-title">La note enchantée</h3>
-                                <p class="sub-title">Charonne</p>
+                                <div class="rectangle">
+                                    <h4 class="name-plat">Filet de bœuf aux herbes</h4>
+                                    <p class="detail-plat">Accompagné de sa ribambelle de légumes<span>40€</span></p>
+                                </div>
+                                <div class="rectangle">
+                                    <h4 class="name-plat">Parmentier de queue de bœuf</h4>
+                                    <p class="detail-plat">À la truffe noire sur sa purée de panais<span>35€</span></p>
+                                </div>
+                                <div class="rectangle">
+                                    <h4 class="name-plat">Filet de turbot</h4>
+                                    <p class="detail-plat">Aux agrumes<span>44€</span></p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <i class="fa-regular fa-heart"></i>
-                </article>
-                <article class="card">
-                    <a href="#">
-                        <img src="./images/restaurants/a-la-francaise.jpg" alt="Image d'un plat montrant le menu  à la française.jpg">
-                        <div class="card-content">
+                        </a>
+                    </div>
+                    <div class="card-plat">
+                        <h3 class="card-title">Desserts</h3>
+                        <a href="">  
                             <div class="card-txt">
-                                <h3 class="card-title">À la française</h3>
-                                <p class="sub-title">Cité Rouge</p>
+                                <div class="rectangle">
+                                    <h4 class="name-plat">Paris-Brest</h4>
+                                    <p class="detail-plat">Revisité<span>18€</span></p>
+                                </div>
+                                <div class="rectangle">
+                                    <h4 class="name-plat">Macaron au chocolat d'exception </h4>
+                                    <p class="detail-plat">Et glace à la vanille de Madagascar<span>22€</span></p>
+                                </div>
+                                <div class="rectangle">
+                                    <h4 class="name-plat">Mousse au chocolat </h4>
+                                    <p class="detail-plat">Au piment d'Espelette et à la truffe noire<span>23€</span></p>
+                                </div>
                             </div>
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                    </a>
-                </article>
-                <article class="card">
-                    <a href="#">
-                        <img src="./images/restaurants/Le-delice-des sens.jpg" alt="Image d'un plat montrant Le delice des sens">
-                        <div class="card-content">
-                            <div class="card-txt">
-                                <h3 class="card-title">Le délice des sens</h3>
-                                <p class="sub-title">Folie-Méricourt</p>
-                            </div>
-            
-                        </div>
-                    </a>
-                    <i class="fa-regular fa-heart"></i>
-                </article>
-            </div>
-        </section>
+                        </a>
+                    </div>
+                    <button class="btn btn-command">Commander</button>
+                </div>
+            </a>
+        </article>
     </section>
     <footer class="footer">
         <h2 class="logo-font logo-footer">ohmyfood</h2>
@@ -123,4 +111,4 @@
             <li>Contact</li>
     </footer>
 </body>
-</html>
+

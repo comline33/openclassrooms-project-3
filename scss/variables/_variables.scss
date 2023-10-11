@@ -1,0 +1,24 @@
+
+//color varibales 
+$primary-color : #9356DC ;
+$secondary-color :#FF79DA  ;
+$terciary-color : #99E2D0 ;
+$main-bgr-color :#F6F6F6;
+
+//shadow  varibales 
+$main-box-shadow :0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+
+//font  varibales 
+$font-title : Shrikhand , Helvetica, sans-serif;
+$font-text : roboto, arial , sans-serif;
+
+//marge  varibales 
+$inter-gap : 20px;
+$exter-gap : 50px;
+$paddig-section :50px;
+
+%main-flex{ // make a div in order column flex   
+    display: flex;
+    flex-direction: column;
+}
+

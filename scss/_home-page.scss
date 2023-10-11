@@ -1,0 +1,121 @@
+@use './variables/variables.scss'as *;// import variables 
+.main-container{
+    @extend %main-flex;//make a vertical div 
+    gap: $exter-gap;
+    .reservation-bloc{
+        @extend %main-flex;// make a div in order column flex  
+        gap: $inter-gap;
+        padding-bottom: 50px;
+        align-items: center;
+        text-align: center;
+        background: var(--Background, #F6F6F6);
+        .btn-reservation{
+            padding: 0 30px;
+        }
+        .location-form{
+            @extend %main-flex;//make a vertical div 
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50px;
+            background:var(--Grey-2, #EAEAEA);;
+            .form{
+                display: flex;
+                align-items: center;
+                margin-left: 70px;
+                gap: 17px;
+                color: var(--Grey, #353535);
+            }
+            input{
+                background: none;
+                border: none;
+                align-self: flex-end;
+                font-size: 16px;
+                font-weight: 700;
+                color: #353535;
+            }
+        }
+        .title-home{
+            width: 70%;
+        }
+        .text-home{
+            font-weight: 400;
+            font-size: 18px;
+        }
+    }
+    .filters-bloc{
+        @extend %main-flex;// make a div in order column flex  
+        gap: $exter-gap;
+        .filter-box{
+            counter-increment: number-box;
+            position: relative;
+            width: 80%;
+            display: flex;
+            justify-content: space-evenly;
+            align-self: center;
+            border-radius: 20px;
+            background:  $main-bgr-color;
+            box-shadow: $main-box-shadow;
+            padding: 20px;
+            .fa-color {
+                color: $primary-color;
+            }
+        }
+        .filter-box::before{
+            content: counter(number-box);
+            position: absolute;
+            left:-15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            background-color: $primary-color;
+            color: white;
+            font-size: 16px;
+        }
+        h2{
+            margin-left: 20px;
+        }
+    }
+    .favorate-menu{
+        background-color:$main-bgr-color;
+        @extend %main-flex;// make a div in order column flex  
+        align-items: center;
+        gap: $inter-gap;
+        padding-top: $paddig-section;
+        .card-box{
+            img{
+                border-radius: 15px 15px 0 0;
+                width: 346px;
+                height: 231px;
+            }
+            @extend %main-flex;
+            gap: 18px;
+            margin-bottom: 30px;
+            .card{
+                background-color: white;
+                border-radius: 15px;
+                .card-content{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px;
+                    .fa-heart {
+                        &:active{
+                            background-color: red;
+                        }
+                        &:hover{
+                            background-color: red;
+                        }
+                    }
+                    
+                    .card-txt{
+                        @extend %main-flex;// make a div in order column flex  
+                        gap: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+/* Small devices (phones, less than 768px) */
+@use './variables/variables'as *;// import variables 
+@use'./global-layout';// import global css 
+@use'./home-page';// import a home page section  
+@use'./menu/menus';// import a menu pages sections 
+@use'./header';// import header css 
+@use'./footer';// import footer css 
+    
+    
+    
+    
+
