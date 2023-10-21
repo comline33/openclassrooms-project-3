@@ -17,10 +17,12 @@ $inter-gap : 20px;
 $exter-gap : 50px;
 $paddig-section :50px;
 
-%main-flex{ // make a div in order column flex   
+%main-flex{ // making a div in order column flex   
     display: flex;
     flex-direction: column;
 }
-
+%main-flex-row{ // making a div in order column flex   
+    flex-direction: row;
+}
 $Bg-color-btn : linear-gradient(193deg, $primary-color -11.44%, $secondary-color 123.93%);
 

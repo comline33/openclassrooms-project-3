@@ -1,0 +1,34 @@
+@use './variables/variables.scss'as *;// import variables 
+
+@media(min-width: 950px) {
+    body{
+        .main-container{
+            .filters-bloc{
+                flex-direction: row;// make a div in order column flex 
+                flex-wrap: wrap;
+                align-items: center;
+                padding: 0 180px;
+                .title-bloc{
+                    width: 100%;
+                    align-self: flex-end;
+                }
+                .filter-box{
+                    width: 30%;
+                    flex: 1;
+                    
+                }
+            }
+            .favorate-menu{
+                gap: 18px;
+                padding: 0 180px;
+                .card-box{
+                    flex-direction: row !important;
+                    flex-wrap: wrap;
+                    justify-content: center;
+    
+                } 
+
+            }
+        }
+    }
+}

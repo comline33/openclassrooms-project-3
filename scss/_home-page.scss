@@ -39,6 +39,7 @@
             width: 70%;
         }
         .text-home{
+            width: 80%;
             font-weight: 400;
             font-size: 18px;
         }
@@ -86,17 +87,18 @@
         gap: $inter-gap;
         padding-top: $paddig-section;
         .card-box{
-            img{
-                border-radius: 15px 15px 0 0;
-                width: 346px;
-                height: 231px;
-            }
             @extend %main-flex;
             gap: 18px;
             margin-bottom: 30px;
             .card{
+                width: 346px;
                 background-color: white;
                 border-radius: 15px;
+                img{
+                    width: 100%;
+                    border-radius: 15px 15px 0 0;
+                    height: 231px;
+                }
                 .card-content{
                     display: flex;
                     justify-content: space-between;

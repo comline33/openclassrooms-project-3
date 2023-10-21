@@ -8,16 +8,6 @@
           flex-direction: column;
 }
 
-header, * body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -85,6 +75,46 @@ header, * body {
   color: black;
 }
 
+@media (min-width: 950px) {
+  body .main-container .filters-bloc {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 180px;
+  }
+  body .main-container .filters-bloc .title-bloc {
+    width: 100%;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  body .main-container .filters-bloc .filter-box {
+    width: 30%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  body .main-container .favorate-menu {
+    gap: 18px;
+    padding: 0 180px;
+  }
+  body .main-container .favorate-menu .card-box {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 .main-container {
   gap: 50px;
 }
@@ -135,6 +165,7 @@ header, * body {
   width: 70%;
 }
 .main-container .reservation-bloc .text-home {
+  width: 80%;
   font-weight: 400;
   font-size: 18px;
 }
@@ -198,14 +229,15 @@ header, * body {
   gap: 18px;
   margin-bottom: 30px;
 }
-.main-container .favorate-menu .card-box img {
-  border-radius: 15px 15px 0 0;
-  width: 346px;
-  height: 231px;
-}
 .main-container .favorate-menu .card-box .card {
+  width: 346px;
   background-color: white;
   border-radius: 15px;
+}
+.main-container .favorate-menu .card-box .card img {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  height: 231px;
 }
 .main-container .favorate-menu .card-box .card .card-content {
   display: -webkit-box;
@@ -226,10 +258,6 @@ header, * body {
 
 /* Small devices (phones, less than 320px)  exemple :iphone 4 */
 @media (min-width: 950px) {
-  body {
-    margin: 0 50px;
-    background-color: black;
-  }
   .card-content-plat {
     width: 80%;
     -webkit-box-align: center;

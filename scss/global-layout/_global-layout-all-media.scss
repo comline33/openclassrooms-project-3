@@ -1,12 +1,4 @@
 @use './variables/variables.scss'as *;// import variables 
-
-%main-flex{ // make a div in order column flex    
-    display: flex;
-    flex-direction: column;
-}
-%main-flex-row{// make a div in order row flex  
-    flex-direction: row;
-}
 *{
     margin:0;
     padding: 0;
@@ -37,7 +29,6 @@
             color: white;
             align-self: center;
         }
-        
         .first-title{
             font-family: $font-title;
             color:  #101010;
