@@ -1,4 +1,4 @@
-@use './variables/variables.scss'as *;// import variables 
+@use '../variables/variables.scss'as *;// import variables 
 @media(min-width: 950px) {
     body{
         display: flex;
@@ -28,7 +28,23 @@
                     justify-content: space-between;
                     gap: 50px;
                     .card{
+                        height: 500px;
                         width: 45%;
+                        img{
+                            height: 70%;
+                        }
+                        .card-content{
+                            padding: 45px;
+                            .card-txt{
+                                gap: 10px;
+                                .card-title{
+                                    font-size: 22px;
+                                }
+                                .sub-title{
+                                    font-size: 18px;
+                                }
+                            }
+                        }
                     }
                     .new-card::after{
                         margin-left: 30px;

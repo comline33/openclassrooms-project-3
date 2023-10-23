@@ -1,4 +1,4 @@
-@use './variables/variables.scss'as *;// import variables 
+@use '../variables/variables.scss'as *;// import variables 
 .main-container{
     @extend %main-flex;//make a vertical div 
     gap: $exter-gap;
@@ -59,6 +59,11 @@
             background:  $main-bgr-color;
             box-shadow: $main-box-shadow;
             padding: 20px;
+            transition: 0.5s;
+            cursor: pointer;
+            &:hover{
+                background: white;
+            }
             .fa-color {
                 color: $primary-color;
             }
@@ -93,12 +98,17 @@
             .card{
                 background-color: white;
                 border-radius: 15px;
+                transition: 0.5s;
+                &:hover{
+                    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+                }
                 img{
                     width: 100%;
                     border-radius: 15px 15px 0 0;
                     height: 231px;
                 }
                 .card-content{
+                    position: relative;
                     display: flex;
                     justify-content: space-between;
                     padding: 10px;
@@ -106,10 +116,28 @@
                         @extend %main-flex;// make a div in order column flex  
                         gap: 5px;
                     }
-                }
-                .fa-heart{
-                    font-size: 22px;
-                    cursor: pointer;
+                    .like-heart{
+                        .fa-heart {
+                            position: absolute;
+                            font-size: 22px;
+                            cursor: pointer;
+                            right: 19px;
+                            transition: 0.2s; 
+                        }
+                        .liked-heart{
+                            opacity: 0;
+                        }
+                        &:hover .liked-heart {
+                            opacity: 1;
+                            -webkit-background-clip: text;
+                            color: transparent;
+                            background-image: linear-gradient(#9356DC,#FF79DA);
+                            background-clip: text;
+                        }
+                        &:hover .unliked-heart{
+                            opacity: 0;
+                        }
+                    }
                 }
             }
             .new-card{

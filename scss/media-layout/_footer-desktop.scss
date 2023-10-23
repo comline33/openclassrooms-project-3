@@ -1,5 +1,5 @@
 
-@use './variables/variables.scss'as *;// import variables 
+@use '../variables/variables.scss'as *;// import variables 
 @media (min-width: 950px){
     .footer{
         flex-direction: row-reverse;

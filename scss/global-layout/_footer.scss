@@ -1,4 +1,4 @@
-@use './variables/variables.scss'as *;// import variables 
+@use '../variables/variables.scss'as *;// import variables 
 .footer{
     @extend %main-flex;
     gap: 16px;
@@ -21,6 +21,9 @@
         }
         .icon-footer{
             margin-right: 8px;
+        }
+        .contact-footer a{
+            color: white ;
         }
     }
 }

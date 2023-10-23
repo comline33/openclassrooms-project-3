@@ -1,5 +1,5 @@
 
-@use './variables/variables.scss'as *;// import variables 
+@use '../variables/variables.scss'as *;// import variables 
 header{
     @extend %main-flex;// make a div in order column flex  
     height: 63px;

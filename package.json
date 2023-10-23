@@ -1,0 +1,12 @@
+{
+  "name": "tata",
+  "version": "1.0.0",
+  "description": "sss",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass  scss/main.scss:css/main.css --no-source-map -w",
+    "comp": "sass  scss/main.scss:css/main.scss --style=compressed --no-source-map -w"
+  },
+  "author": "",
+  "license": "ISC"
+}
