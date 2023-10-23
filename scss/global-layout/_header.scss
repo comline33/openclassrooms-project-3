@@ -8,6 +8,7 @@ header{
     gap: -0.5px;
     text-align: center;
     padding: 14px 89px 13px 89px;
+    z-index: 2;
     box-shadow: $main-box-shadow;
     .logo{
         align-items: center;

@@ -1,5 +1,12 @@
 @use './variables/variables.scss'as *;// import variables 
 @use './media-desktop';
+header{
+    flex-direction: row;
+    .fa-arrow-left{
+        position: relative;
+        right: 91px;
+    }
+}
 .card-box-menu{
     img{
         width: 100%;
@@ -18,9 +25,17 @@
             border-radius: 50px 50px 0 0 ;
             padding-bottom: 40px;
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-            .first-title{
+            .title-menu{
                 padding-top: 20px;
-                margin-left: 20px;
+                display: flex;
+                align-items: center;
+                gap: 48px;
+                .first-title{
+                    margin-left: 20px;
+                }
+                .fa-heart{
+                    font-size: 22px;
+                }
             }
             .btn-command{
                 padding: 0 50px;
@@ -34,6 +49,7 @@
                     text-transform: uppercase;
                     border-bottom: 3px solid $terciary-color;
                     padding-bottom: 10px;
+                    margin-left: 20px
                 }
                 .card-txt{
                     @extend %main-flex;

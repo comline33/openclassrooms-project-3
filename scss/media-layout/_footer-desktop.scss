@@ -1,0 +1,19 @@
+
+@use './variables/variables.scss'as *;// import variables 
+@media (min-width: 950px){
+    .footer{
+        flex-direction: row-reverse;
+        .footer-list{
+            display: flex;
+            width: 50%;
+            align-items: flex-end;
+            .contact-footer{
+                position: relative;
+                left: -62px;
+                a{
+                    color: white;
+                }
+            }
+        }
+    }
+}

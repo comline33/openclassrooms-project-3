@@ -28,6 +28,12 @@
             border: none;
             color: white;
             align-self: center;
+            cursor: pointer;
+            transition-duration: 0.2;
+            &:hover{
+                box-shadow: 4px  rgba(0, 0, 0, 0.1);
+                opacity: 0.8;
+            }
         }
         .first-title{
             font-family: $font-title;
@@ -40,7 +46,6 @@
         }
         .title-bloc{
             align-self: flex-start;
-            margin-left: 20px;
         }
         h2{
             font-family: $font-text;

@@ -1,11 +1,14 @@
 /* Small devices (phones, less than 768px) */
-@use './variables/variables'as *;// import variables 
+@use'./variables/variables'as *;// import variables 
 @use'./global-layout/global-layout-all-media';// import all media css 
-@use'./global-layout/global-layout-larg-media';// import all media css 
-@use'./home-page';// import a home pages section  
-@use'./menu/menus';// import a menu pages section 
-@use'./header';// import header css 
-@use'./footer';// import footer css 
+@use'./home-page/home-page';// import a home pages section  
+@use'./menus-pages/menus';// import a menu pages section 
+@use'./menus-pages/media-desktop';// import a menu pages section 
+@use'./global-layout/header';// import header css 
+@use'./global-layout/footer';// import footer css 
+@use'./media-layout/header-desktop';// import header style for desktop media  
+@use'./media-layout/footer-desktop';// // import footer style for desktop media 
+@use'./media-layout/home-page-desktop';
 
 
 

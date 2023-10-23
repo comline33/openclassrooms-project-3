@@ -2,6 +2,8 @@
 
 @media(min-width: 950px) {
     body{
+        display: flex;
+        flex-direction: column;
         .main-container{
             .filters-bloc{
                 flex-direction: row;// make a div in order column flex 
@@ -15,17 +17,21 @@
                 .filter-box{
                     width: 30%;
                     flex: 1;
-                    
                 }
             }
             .favorate-menu{
+                align-items: stretch;
                 gap: 18px;
-                padding: 0 180px;
+                padding: 30px 180px;
                 .card-box{
                     flex-direction: row !important;
                     flex-wrap: wrap;
-                    justify-content: center;
-    
+                    justify-content: space-between;
+                    gap: 50px;
+                    .card{
+                        position: relative;
+                        width: 45%;
+                    }
                 } 
 
             }
