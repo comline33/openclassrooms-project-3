@@ -1,4 +1,4 @@
-@use '../variables/variables.scss'as *;// import variables 
+@use '../helpers/variables' as *;// import variables 
 
 /* Small devices (phones, less than 320px)  exemple :iphone 4 */
 @media (min-width: 950px) {

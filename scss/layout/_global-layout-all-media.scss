@@ -1,4 +1,4 @@
-@use '../variables/variables.scss' as *;// import variables 
+@use '../helpers/variables' as *;// import variables 
 *{
     margin:0;
     padding: 0;
@@ -59,6 +59,29 @@
         a{
             text-decoration: none;
             color: black;
+        }
+        
+    }
+    .like-heart{
+        .fa-heart {
+            position: absolute;
+            font-size: 22px;
+            cursor: pointer;
+            right: 19px;
+            transition: 0.2s; 
+        }
+        .liked-heart{
+            opacity: 0;
+        }
+        &:hover .liked-heart {
+            opacity: 1;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to bottom, #9356DC,#FF79DA);
+            background-clip: text;
+        }
+        &:hover .unliked-heart{
+            opacity: 0;
         }
     }
 }

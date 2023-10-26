@@ -1,7 +1,7 @@
 {
-  "name": "tata",
+  "name": "peoject-openclassrooms",
   "version": "1.0.0",
-  "description": "sss",
+  "description": "use widht sass",
   "main": "index.js",
   "scripts": {
     "sass": "sass  scss/main.scss:css/main.css --no-source-map -w",

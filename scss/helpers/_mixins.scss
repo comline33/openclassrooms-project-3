@@ -1,0 +1,47 @@
+@mixin overlay($color,$opacity){ // create a back plan for  loader 
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+ background-color: rgba($color, $opacity);
+}
+
+@mixin keyF($anim-name){ // import a web-kit vendors 
+    @-webkit-keyframes #{$anim-name} {
+        @content;
+    }
+    @keyframes #{$anim-name} {
+        @content;
+    }
+}
+
+@mixin  display-col{ // making a div as a column direction 
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin display-centering { // centering content in div parent
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin breakpoints($point){ // control a media queries screen
+    @if $point == mobile {
+        @media (max-width :767px) {
+            @content;
+        }
+    }@else if $point == small {
+        @media (min-width :768px) and (max-width :991px) {
+            @content;
+        }
+    }@else if  $point == medium {
+        @media (min-width :992px) and (max-width :1199px) {
+            @content;
+        }
+    }@else if  $point == large {
+        @media (min-width :1200px) {
+            @content;
+        }
+    }
+}

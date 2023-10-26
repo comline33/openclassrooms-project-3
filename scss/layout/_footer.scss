@@ -1,4 +1,4 @@
-@use '../variables/variables.scss'as *;// import variables 
+@use '../helpers/variables' as *;// import variables 
 .footer{
     @extend %main-flex;
     gap: 16px;
