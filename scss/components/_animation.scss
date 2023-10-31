@@ -1,1 +1,48 @@
-@use '../helpers/variables' as *;// import variables 
+@use '../helpers/variables' ;// import variables
+@use '../helpers/mixins' ;// import variables 
+
+@include mixins.keyF(back-overlay){
+    0%{
+        @include mixins.overlay(variables.$main-bgr-color ,0)
+    }
+    70%{
+        @include mixins.overlay(variables.$main-bgr-color,0.1)
+    }
+    100%{
+        @include mixins.overlay(variables.$main-bgr-color,1)
+    }
+}
+
+@include mixins.keyF(spin){
+    0%{
+        transform: rotate(0deg) ;
+    }
+    100%{
+        transform: rotate(360deg) ;
+    }
+}
+
+@include mixins.keyF(fade-in){
+    0%{
+        opacity: 1;
+    }
+    99%{
+        opacity: 0.7;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+    
+}
+@include mixins.keyF(card-aparition){
+    0%{
+       opacity: 0.5;
+       transform: translateY(20px);
+    }
+   
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+     }
+}

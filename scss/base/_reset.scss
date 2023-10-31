@@ -1,1 +1,17 @@
-@use '../helpers/variables' as *;// import variables 
+@use '../helpers/variables';// import variables 
+@use '../helpers/mixins';// import variables 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul li{
+    @include mixins.ul-reset;
+}
+a + .fa-solid{
+    display: flex;
+    @include mixins.display-centering
+}
+
+  
+

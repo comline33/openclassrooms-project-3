@@ -1,1 +1,20 @@
-@use '../helpers/variables' as *;// import variables 
+@use '../helpers/variables' ;// import variables 
+@use '../helpers/mixins' ;// import mixins
+.btn{
+    background: variables.$Bg-color-btn ;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 25px;
+    font-family: Roboto;
+    border: none;
+    color: white;
+    align-self: center;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    &:hover{
+        box-shadow: 4px  rgba(0, 0, 0, 0.1);
+        opacity: 0.8;
+    }
+}

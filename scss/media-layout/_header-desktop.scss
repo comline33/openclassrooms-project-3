@@ -1,9 +1,0 @@
-@use '../helpers/variables' as *;// import variables 
-@media(min-width: 950px) {
-    header{
-        flex-direction: row;
-        .fa-arrow-left{
-            right: 591px
-        }
-    }
-}

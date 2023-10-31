@@ -1,24 +1,22 @@
-@use '../helpers/variables' as *;// import variables 
+@use '../../helpers/variables' ;// import variables 
+@use '../../helpers/mixins' ;// import variables 
 .main-container{
     @extend %main-flex;//make a vertical div 
-    gap: $exter-gap;
+    gap: variables.$exter-gap;
     .reservation-bloc{
         @extend %main-flex;// make a div in order column flex  
-        gap: $inter-gap;
+        gap: variables.$inter-gap;
         padding-bottom: 50px;
         align-items: center;
         text-align: center;
-        background: $main-bgr-color;
-        .btn-reservation{
-            padding: 0 30px;
-        }
+        background: variables.$main-bgr-color;
         .location-form{
             @extend %main-flex;//make a vertical div 
             align-items: center;
             justify-content: center;
             width: 100%;
             height: 50px;
-            background:$main-bgr-color-2;
+            background:variables.$main-bgr-color-2;
             .form{
                 display: flex;
                 align-items: center;
@@ -43,11 +41,14 @@
             font-weight: 400;
             font-size: 18px;
         }
+        .btn-reservation{
+            padding: 0 30px;
+        }
     }
     .filters-bloc{
         @extend %main-flex;// make a div in order column flex
         padding: 0 18px 0 32px;  
-        gap: $exter-gap;
+        gap: variables.$exter-gap;
         .filter-box{
             counter-increment: number-box;
             position: relative;
@@ -56,16 +57,32 @@
             justify-content: space-evenly;
             align-self: center;
             border-radius: 20px;
-            background:  $main-bgr-color;
-            box-shadow: $main-box-shadow;
+            background:  variables.$main-bgr-color;
+            box-shadow: variables.$main-box-shadow;
             padding: 20px;
             transition: 0.5s;
             cursor: pointer;
+            &:nth-child(1) {
+                animation: card-aparition 0.2s  !important;
+                
+            }
+            &:nth-child(2) {
+                animation: card-aparition 0.4s 1s !important;
+                
+            }
+            &:nth-child(3) {
+                animation: card-aparition 0.6s 1.5s!important; 
+                
+            }
+            &:nth-child(4) {
+                animation: card-aparition 0.8s 2s !important;
+                
+            }
             &:hover{
                 background: white;
             }
             .fa-color {
-                color: $primary-color;
+                color: variables.$primary-color;
             }
         }
         .title-bloc{
@@ -81,30 +98,45 @@
             border-radius: 50%;
             width: 24px;
             height: 24px;
-            background-color: $primary-color;
+            background-color: variables.$primary-color;
             color: white;
             font-size: 16px;
         }
     }
     .favorate-menu{
-        background-color:$main-bgr-color;
+        background-color:variables.$main-bgr-color;
         @extend %main-flex;// make a div in order column flex  
-        gap: $inter-gap;
+        gap: variables.$inter-gap;
         padding :18px;
         .card-box{
             @extend %main-flex;
             gap: 18px;
             margin-bottom: 30px;
             .card{
+                &:nth-child(1) {
+                    animation: card-aparition 1s 2.5s !important;
+                    
+                }
+                &:nth-child(2) {
+                    animation: card-aparition 1.2s 3s !important;
+                    
+                }
+                &:nth-child(3) {
+                    animation: card-aparition 1.4s 3.5s!important; 
+                    
+                }
+                &:nth-child(4) {
+                    animation: card-aparition 1.6s 4s !important;
+                    
+                }
                 background-color: white;
                 border-radius: 15px;
                 transition: 0.5s;
                 &:hover{
-                    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+                    @include mixins.card-hover
                 }
                 img{
                     width: 100%;
-                    border-radius: 15px 15px 0 0;
                     height: 231px;
                 }
                 .card-content{
@@ -116,7 +148,11 @@
                         @extend %main-flex;// make a div in order column flex  
                         gap: 5px;
                     }
-                    
+                    .like-heart{
+                        .fa-heart{
+                            right: 15px;
+                        }
+                    }
                 }
             }
             .new-card{
@@ -132,7 +168,7 @@
                     width: 80px;
                     height: 29px;
                     border-radius: 2px;       
-                    background-color:$terciary-color ;
+                    background-color:variables.$terciary-color ;
                     color: #008766;
                     font-size: 14px;
                     font-weight: 700;

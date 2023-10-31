@@ -1,0 +1,46 @@
+// ***********medium and a larg media **********//
+
+@use '../../helpers/variables';// import variables 
+
+@media (min-width: 950px) { // medium and a larg media
+    .card-content-plat{
+        width: 80%;
+        align-items: center; 
+        align-self: center;
+    }
+    .card-plat{
+        width: 80%;
+    }
+}
+@media (min-width :992px) and (max-width :1199px){ // media medium width
+    .card-txt{
+        .global-rectangle{
+            .tooltip-box{
+                left: 85% !important;
+            }
+        }
+    }
+    .card-plat{
+        .card-title{
+            margin-left: 39px !important;
+        }
+    }
+}
+@media (min-width :1200px) { // media larg width
+    .card-txt{
+        .global-rectangle{
+            .tooltip-box{
+                left: 93% !important;
+            }
+        }
+    }
+    .card-plat{
+        .card-title{
+            margin-left: 66px !important;
+        }
+    }
+    .new-card::after{
+            left: 85% !important;
+        }
+    
+}

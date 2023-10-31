@@ -1,21 +1,22 @@
 /* Small devices (phones, less than 768px) */
 @use './helpers/variables';// import variables
-@use './helpers/mixins';// import variables
+@use './helpers/mixins';// import mixins
 @use './base/reset';
 @use './base/typography';
+@use './base/img';
 @use './components/animation';
 @use './components/buttons';
 @use './components/icons';
-@use'./layout/global-layout-all-media';
-@use './layout/header';
-@use './layout/footer';
-@use './pages/home-page';
-@use './pages/menus';
-@use './media-layout/home-page-desktop';
-@use './media-layout/global-layout-larg-media';
-@use './media-layout/header-desktop';
-@use './media-layout/footer-desktop';
-@use './media-layout/media-desktop-menus';
+@use'./layout/home-pages/home-page';
+@use'./layout/home-pages/loading';
+@use'./layout/home-pages/header';
+@use'./layout/home-pages/footer';
+@use'./layout/menus-pages/menus';
+@use'./media-layout/global-media/header-desktop';
+@use'./media-layout/global-media/footer-desktop';
+@use'./media-layout/home-pages/global-home-media';
+@use'./media-layout/menu-media-pages/media-desktop-menus';
+
 
 // @use './global-layout/global-layout-all-media';// import all media css 
 // @use './home-page/home-page';// import a home pages section  

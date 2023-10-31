@@ -1,0 +1,22 @@
+@use '../../helpers/variables' ;// import variables 
+@use '../../helpers/mixins' ;// import variables 
+@media (min-width :992px) and (max-width :1199px){
+    body{
+        .main-container{
+            .filters-bloc{
+                padding: 0 50px;
+                gap: 30px;
+            }
+            .favorate-menu{
+                padding: 0 40px;
+            }  
+        }
+        .footer{
+            .footer-list{
+                width: 90%;
+            }
+        }
+    }
+
+}
+    

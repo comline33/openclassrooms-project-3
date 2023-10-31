@@ -1,4 +1,5 @@
-@use '../helpers/variables' as *;// import variables 
+@use '../../helpers/variables' ;// import variables 
+@use '../../helpers/mixins' ;// import variables 
 header{
     flex-direction: row;
     .fa-arrow-left{
@@ -20,7 +21,7 @@ header{
             z-index: 10;
             @extend %main-flex;// make a div in order column flex 
             gap: 40px;
-            background-color: $main-bgr-color;
+            background-color:  variables.$main-bgr-color;
             border-radius: 50px 50px 0 0 ;
             padding-bottom: 40px;
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
@@ -34,6 +35,7 @@ header{
                 }
                 .fa-heart{
                     font-size: 22px;
+                    margin-top: -11px;
                 }
             }
             .btn-command{
@@ -46,7 +48,7 @@ header{
                     width: 40px;
                     @extend.first-title;
                     text-transform: uppercase;
-                    border-bottom: 3px solid $terciary-color;
+                    border-bottom: 3px solid variables.$terciary-color;
                     padding-bottom: 10px;
                     margin-left: 20px
                 }
@@ -55,33 +57,61 @@ header{
                     align-items: center;
                     gap: 15px;
                     .global-rectangle{
-                        display: inline-flex;
-                        align-items: center;
+                        position: relative;
+                        display:flex;
                         justify-content: space-between;
+                        align-items: flex-start;
                         background-color: white;
-                        padding-left: 20px;
+                        padding:  0 20px;
                         width: 90%;
                         height: 69px;
                         border-radius: 15px;
+                        cursor: pointer;
                         .rectangle{
-                        position: relative;
-                        width: 95%;    
-                        @extend %main-flex;
-                        gap: 8px;
+                            width: 60%;    
+                            @extend %main-flex;
+                            gap: 8px;
+                            padding-top: 10px;
                             .name-plat{
+                                white-space: nowrap;
                                 font-size: 18px;
                                 font-weight: 700;
                             }
                             .detail-plat{
-                                display: flex;
-                                justify-content:space-between;
-                                span{
-                                    font-weight: 700;
-                                }
+                                white-space: nowrap;
                             }
                         }
-                        .icone-save{
-                            display: none;
+                        .tooltip-box{
+                            position:absolute;
+                            width: 114px;
+                            left: 78%;
+                            height: 100%;
+                            display: flex;
+                            gap: 10px;
+                            .price{
+                                width: 15%;
+                                margin:auto;
+                                font-weight: 700;
+                                font-size: 16px;
+                            }
+                            .icone-save {
+                                width: 0;
+                                height: 100%;
+                                transition-duration: 1s;
+                                transition-property: all;
+                            }
+                        }
+                        &:hover {  
+                            .icone-save{
+                                width: 100%;
+                            }
+                            .name-plat{
+                                @include mixins.text-over-flow;
+                            }
+                            .detail-plat  {
+                                @include mixins.text-over-flow;
+                            }
+
                         }
                     }
                     

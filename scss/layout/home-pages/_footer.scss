@@ -1,4 +1,5 @@
-@use '../helpers/variables' as *;// import variables 
+@use '../../helpers/variables';// import variables
+@use '../../helpers/mixins';// import mixins
 .footer{
     @extend %main-flex;
     gap: 16px;

@@ -1,1 +1,32 @@
-@use '../helpers/variables' as *;// import variables 
+@use '../helpers/variables';// import variables 
+
+body{
+    font-family: Roboto;
+}
+
+.first-title{
+    font-family: variables.$font-title;
+    color:  #101010;
+    font-size: 30px;
+    font-weight: 400;
+}
+.logo-font{
+    font-family: variables.$font-title;
+}
+.title-bloc{
+    align-self: flex-start;
+}
+h2{
+    font-family: variables.$font-text;
+    font-size: 24px;
+    font-weight: 700;
+}
+p{
+    font-size: 15px;
+    font-weight: 300;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
