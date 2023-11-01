@@ -1,5 +1,5 @@
 @use '../../helpers/variables' ;// import variables 
-@use '../../helpers/mixins' ;// import variables 
+@use '../../helpers/mixins' ;// import mixins 
 header{
     flex-direction: row;
     .fa-arrow-left{
@@ -66,6 +66,7 @@ header{
                         width: 90%;
                         height: 69px;
                         border-radius: 15px;
+                        animation: card-aparition-h 1s  !important;
                         cursor: pointer;
                         .rectangle{
                             width: 60%;    
@@ -84,10 +85,10 @@ header{
                         .tooltip-box{
                             position:absolute;
                             width: 114px;
-                            left: 78%;
+                            left: 76%;
                             height: 100%;
                             display: flex;
-                            gap: 10px;
+                            gap: 20px;
                             .price{
                                 width: 15%;
                                 margin:auto;
@@ -111,13 +112,10 @@ header{
                             .detail-plat  {
                                 @include mixins.text-over-flow;
                             }
-
                         }
-                    }
-                    
+                    }     
                 }
             }
-    
         }
     }
     

@@ -1,6 +1,9 @@
 @use '../helpers/variables' ;// import variables 
 @use '../helpers/mixins' ;// import mixins
-.btn{
+
+.btn{ // style button in all pages 
+    display: flex;
+    align-items: center;
     background: variables.$Bg-color-btn ;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     height: 50px;
@@ -14,7 +17,6 @@
     cursor: pointer;
     transition-duration: 0.2s;
     &:hover{
-        box-shadow: 4px  rgba(0, 0, 0, 0.1);
         opacity: 0.8;
     }
 }

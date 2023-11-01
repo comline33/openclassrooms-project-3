@@ -1,6 +1,7 @@
 @use '../helpers/variables';// import variables 
 @use '../helpers/mixins';// import  mixins 
-.like-heart{
+
+.like-heart{ // heeart icon in all pages 
     .fa-heart {
         position: absolute;
         font-size: 22px;

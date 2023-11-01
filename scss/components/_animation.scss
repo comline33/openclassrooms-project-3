@@ -1,19 +1,8 @@
 @use '../helpers/variables' ;// import variables
 @use '../helpers/mixins' ;// import variables 
 
-@include mixins.keyF(back-overlay){
-    0%{
-        @include mixins.overlay(variables.$main-bgr-color ,0)
-    }
-    70%{
-        @include mixins.overlay(variables.$main-bgr-color,0.1)
-    }
-    100%{
-        @include mixins.overlay(variables.$main-bgr-color,1)
-    }
-}
 
-@include mixins.keyF(spin){
+@include mixins.keyF(spin){ // rotation border for loader 
     0%{
         transform: rotate(0deg) ;
     }
@@ -22,7 +11,7 @@
     }
 }
 
-@include mixins.keyF(fade-in){
+@include mixins.keyF(fade-in){ // create a back body 
     0%{
         opacity: 1;
     }
@@ -32,15 +21,24 @@
     100%{
         opacity: 0;
         display: none;
-    }
-    
+    }   
 }
-@include mixins.keyF(card-aparition){
+
+@include mixins.keyF(card-aparition){// animation card verticfal aparition 
     0%{
-       opacity: 0.5;
-       transform: translateY(20px);
+       opacity: 0;
+       transform: translatey(-50px);
     }
-   
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+     }
+}
+@include mixins.keyF(card-aparition-h){// animation card horizantal aparition 
+    0%{
+       opacity: 0;
+       transform: translatex(-100px);
+    }
     100%{
         opacity: 1;
         transform: translateY(0);

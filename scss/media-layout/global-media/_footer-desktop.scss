@@ -1,5 +1,6 @@
 
 @use '../../helpers/variables' as *;// import variables 
+
 @media (min-width: 950px){
     .footer{
         flex-direction: row-reverse;

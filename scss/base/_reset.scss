@@ -12,6 +12,10 @@ a + .fa-solid{
     display: flex;
     @include mixins.display-centering
 }
+.fa-solid{
+    display: flex;
+    align-items: center;
+}
 
   
 

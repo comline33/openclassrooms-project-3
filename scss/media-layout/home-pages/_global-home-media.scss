@@ -1,12 +1,5 @@
 @use '../../helpers/variables' ;// import variables 
 @use '../../helpers/mixins' ;// import mixins
-// @media (max-width :991px) {
-//     body{
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//     }
-// }
 @media (min-width :992px) { // medium and a larg media
     body{
         display: flex;
@@ -61,13 +54,16 @@
                 height: 180px !important;
             }
         }
+        .tooltip-box{
+            left: 91%;
+        }
+    
         .footer{
             .footer-list{
                 width: 90%;
             }
         }
     }
-
 }
 @media (min-width :1200px) {
     .card{
@@ -78,4 +74,9 @@
     .new-card::after{
         left: 85% !important;
     }
+    .loader {
+        left: 44% !important;
+        top: 40%;
+    }
+    
 }

@@ -1,9 +1,7 @@
 @use '../helpers/variables';// import variables 
-
 body{
     font-family: Roboto;
 }
-
 .first-title{
     font-family: variables.$font-title;
     color:  #101010;

@@ -1,33 +1,22 @@
-/* Small devices (phones, less than 768px) */
+
 @use './helpers/variables';// import variables
 @use './helpers/mixins';// import mixins
-@use './base/reset';
-@use './base/typography';
-@use './base/img';
-@use './components/animation';
-@use './components/buttons';
-@use './components/icons';
-@use'./layout/home-pages/home-page';
-@use'./layout/home-pages/loading';
-@use'./layout/home-pages/header';
-@use'./layout/home-pages/footer';
-@use'./layout/menus-pages/menus';
-@use'./media-layout/global-media/header-desktop';
-@use'./media-layout/global-media/footer-desktop';
-@use'./media-layout/home-pages/global-home-media';
-@use'./media-layout/menu-media-pages/media-desktop-menus';
+@use './base/reset'; // import reset 
+@use './base/typography'; // import police and font  typography
+@use './base/img'; // import images styling  
+@use './components/animation';// import the animation styling 
+@use './components/buttons';// import a button styling 
+@use './components/icons';// import a icons styling 
+@use'./layout/home-pages/home-page';// import first pages of web site styling 
+@use'./layout/home-pages/loading';// import animation loading styling 
+@use'./layout/home-pages/header';// import header styling 
+@use'./layout/home-pages/footer';// import footer styling 
+@use'./layout/menus-pages/menus';// import pages menus  styling 
+@use'./media-layout/global-media/header-desktop'; // import media query styling 
+@use'./media-layout/global-media/footer-desktop';// import media query styling
+@use'./media-layout/home-pages/global-home-media';// import media query styling
+@use'./media-layout/menu-media-pages/media-desktop-menus';// import media query styling
 
-
-// @use './global-layout/global-layout-all-media';// import all media css 
-// @use './home-page/home-page';// import a home pages section  
-// @use'./menus-pages/menus';// import a menu pages section 
-// @use'./menus-pages/media-desktop';// import a menu pages section 
-// @use'./global-layout/header';// import header css 
-// @use'./global-layout/footer';// import footer css 
-// @use'./media-layout/header-desktop';// import header style for desktop media  
-// @use'./media-layout/footer-desktop';// // import footer style for desktop media 
-// @use'./media-layout/home-page-desktop';
-    
     
     
     

@@ -1,5 +1,5 @@
 @use '../../helpers/variables' ;// import variables 
-@use '../../helpers/mixins' ;// import variables 
+@use '../../helpers/mixins' ;// import mixins
 @media (min-width :992px) and (max-width :1199px){
     body{
         .main-container{
@@ -17,6 +17,5 @@
             }
         }
     }
-
 }
     
