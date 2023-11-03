@@ -26,21 +26,24 @@
 
 @include mixins.keyF(card-aparition){// animation card verticfal aparition 
     0%{
-       opacity: 0;
+       
        transform: translatey(-50px);
     }
+    
     100%{
-        opacity: 1;
+        
         transform: translateY(0);
      }
+     
 }
 @include mixins.keyF(card-aparition-h){// animation card horizantal aparition 
     0%{
-       opacity: 0;
+       
        transform: translatex(-100px);
     }
+    
     100%{
-        opacity: 1;
-        transform: translateY(0);
+        
+        transform: translatex(0);
      }
 }

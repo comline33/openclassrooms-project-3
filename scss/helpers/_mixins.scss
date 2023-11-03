@@ -39,6 +39,15 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+@mixin child-aparition ($animation-name ,$time-duration ,$time-delay,$div-lenght){
+    @for $i from 1 through $div-lenght{
+        $time-delay:$time-delay + 0.2;
+        &:nth-child(#{$i}) {
+            animation: $animation-name $time-duration $time-delay ;
+        }
+    }
+
+}
 
 
 

@@ -1,6 +1,7 @@
 @use '../../helpers/variables';// import variables
 @use '../../helpers/mixins';// import mixins
 .footer{
+    height: auto;
     @extend %main-flex;
     gap: 16px;
     padding: 22px 22px;

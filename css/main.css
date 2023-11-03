@@ -109,42 +109,34 @@ img {
 }
 @-webkit-keyframes card-aparition {
   0% {
-    opacity: 0;
     transform: translatey(-50px);
   }
   100% {
-    opacity: 1;
     transform: translateY(0);
   }
 }
 @keyframes card-aparition {
   0% {
-    opacity: 0;
     transform: translatey(-50px);
   }
   100% {
-    opacity: 1;
     transform: translateY(0);
   }
 }
 @-webkit-keyframes card-aparition-h {
   0% {
-    opacity: 0;
     transform: translatex(-100px);
   }
   100% {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translatex(0);
   }
 }
 @keyframes card-aparition-h {
   0% {
-    opacity: 0;
     transform: translatex(-100px);
   }
   100% {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translatex(0);
   }
 }
 .btn {
@@ -287,19 +279,18 @@ img {
 .main-container .favorate-menu .card-box .card {
   background-color: white;
   border-radius: 15px;
-  transition: 0.5s;
 }
 .main-container .favorate-menu .card-box .card:nth-child(1) {
-  animation: card-aparition 1s 2.5s !important;
+  animation: card-aparition 2s 2.2s;
 }
 .main-container .favorate-menu .card-box .card:nth-child(2) {
-  animation: card-aparition 1.2s 3s !important;
+  animation: card-aparition 2s 2.4s;
 }
 .main-container .favorate-menu .card-box .card:nth-child(3) {
-  animation: card-aparition 1.4s 3.5s !important;
+  animation: card-aparition 2s 2.6s;
 }
 .main-container .favorate-menu .card-box .card:nth-child(4) {
-  animation: card-aparition 1.6s 4s !important;
+  animation: card-aparition 2s 2.8s;
 }
 .main-container .favorate-menu .card-box .card:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
@@ -406,6 +397,7 @@ header .logo {
 }
 
 .footer {
+  height: auto;
   gap: 16px;
   padding: 22px 22px;
   background-color: #353535;
@@ -497,8 +489,19 @@ header .fa-arrow-left {
   width: 90%;
   height: 69px;
   border-radius: 15px;
-  animation: card-aparition-h 1s !important;
   cursor: pointer;
+}
+.card-box-menu .card-menu-command .card-content-plat .card-plat .card-txt .global-rectangle:nth-child(1) {
+  animation: card-aparition-h 2s 2.2s;
+}
+.card-box-menu .card-menu-command .card-content-plat .card-plat .card-txt .global-rectangle:nth-child(2) {
+  animation: card-aparition-h 2s 2.4s;
+}
+.card-box-menu .card-menu-command .card-content-plat .card-plat .card-txt .global-rectangle:nth-child(3) {
+  animation: card-aparition-h 2s 2.6s;
+}
+.card-box-menu .card-menu-command .card-content-plat .card-plat .card-txt .global-rectangle:nth-child(4) {
+  animation: card-aparition-h 2s 2.8s;
 }
 .card-box-menu .card-menu-command .card-content-plat .card-plat .card-txt .global-rectangle .rectangle {
   width: 60%;
@@ -519,7 +522,7 @@ header .fa-arrow-left {
   left: 76%;
   height: 100%;
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 .card-box-menu .card-menu-command .card-content-plat .card-plat .card-txt .global-rectangle .tooltip-box .price {
   width: 15%;
@@ -669,5 +672,13 @@ header .fa-arrow-left {
   }
   .new-card::after {
     left: 85% !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .card-txt .global-rectangle .tooltip-box {
+    left: 86% !important;
+  }
+  .card-plat .card-title {
+    margin-left: 39px !important;
   }
 }
