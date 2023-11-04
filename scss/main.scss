@@ -12,12 +12,9 @@
 @use'./layout/home-pages/header';// import header styling 
 @use'./layout/home-pages/footer';// import footer styling 
 @use'./layout/menus-pages/menus';// import pages menus  styling 
-@use'./media-layout/global-media/header-desktop'; // import media query styling 
-@use'./media-layout/global-media/footer-desktop';// import media query styling
-@use'./media-layout/home-pages/global-home-media';// import media query styling
-@use'./media-layout/menu-media-pages/media-desktop-menus';// import media query styling
+@use'./media-layout/home-media'; // import home page media query styling 
+@use'./media-layout/media-menus';// import menus pages media query styling
+@use'./media-layout/footer-madia';// import footer media query styling
+@use'./media-layout/header-media';// import footer media query styling
 
-    
-    
-    
 

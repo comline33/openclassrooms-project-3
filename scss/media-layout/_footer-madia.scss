@@ -1,7 +1,7 @@
 
-@use '../../helpers/variables' as *;// import variables 
+@use '../helpers/variables' ;// import variables 
 
-@media (min-width: 950px){
+@media (min-width: 820px){
     .footer{
         flex-direction: row-reverse;
         .footer-list{
@@ -18,11 +18,3 @@
         }
     }
 }
-
-@media (min-width :992px) and (max-width :1199px){ // media medium width
-        .footer{
-            .footer-list{
-                width: 90%;
-            }
-        }
-    }

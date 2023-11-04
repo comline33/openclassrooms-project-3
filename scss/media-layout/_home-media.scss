@@ -1,6 +1,7 @@
-@use '../../helpers/variables' ;// import variables 
-@use '../../helpers/mixins' ;// import mixins
-@media (min-width :992px) { // medium and a larg media
+@use '../helpers/variables' ;// import variables 
+@use '../helpers/mixins' ;// import mixins
+
+@media (min-width :820px) { // medium and a larg media
     body{
         display: flex;
         flex-direction: column;
@@ -38,12 +39,16 @@
     }
 }
 
-@media (min-width :992px) and (max-width :1199px){ // media medium width
+@media (min-width :820px) and (max-width :1199px){ // media medium width
     body{
         .main-container{
             .filters-bloc{
                 padding: 0 50px;
                 gap: 30px;
+                .filter-box{
+                    padding: 10px;
+                    font-size: 13px;
+                }
             }
             .favorate-menu{
                 padding: 0 40px;
@@ -74,9 +79,4 @@
     .new-card::after{
         left: 85% !important;
     }
-    .loader {
-        left: 44% !important;
-        top: 40%;
-    }
-    
 }

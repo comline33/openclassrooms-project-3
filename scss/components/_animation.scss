@@ -1,7 +1,6 @@
 @use '../helpers/variables' ;// import variables
 @use '../helpers/mixins' ;// import variables 
 
-
 @include mixins.keyF(spin){ // rotation border for loader 
     0%{
         transform: rotate(0deg) ;
@@ -24,26 +23,44 @@
     }   
 }
 
-@include mixins.keyF(card-aparition){// animation card verticfal aparition 
+@include mixins.keyF(card-aparition-traslate-v){// animation card verticfal aparition 
     0%{
-       
+       opacity: 0;
        transform: translatey(-50px);
     }
-    
-    100%{
-        
+    50%{
+        opacity: 0.2; 
+     }
+    100%{ 
         transform: translateY(0);
      }
-     
 }
-@include mixins.keyF(card-aparition-h){// animation card horizantal aparition 
+
+@include mixins.keyF(card-aparition-traslate){// animation card imamges aparition 
     0%{
-       
-       transform: translatex(-100px);
+       opacity: 0;
+       animation-duration: 0.1s;
     }
-    
+    10%{
+        opacity: 0;
+        transform: translate(-1300px,-500px);
+     }
     100%{
-        
-        transform: translatex(0);
+        opacity: 1;
+        transform: translate(0);
+     }
+}
+
+@include mixins.keyF(icon-plate-aparition){// animation green rectangle icon plat  
+    0%{  
+    transform: translateX(150px);
+    }
+    99%{  
+        opacity: 0.8;
+        }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0)
      }
 }

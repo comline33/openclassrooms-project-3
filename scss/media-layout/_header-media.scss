@@ -1,0 +1,16 @@
+@use '../helpers/variables';// import variables 
+@use '../helpers/mixins';// import mixins 
+@media(min-width: 1200px) {
+    header{
+        .fa-arrow-left{
+            right: 650px
+        }
+    }
+}
+@media (min-width :820px) and (max-width :1199px){
+    header{
+        .fa-arrow-left{
+            right: 273px
+        }
+    }
+}

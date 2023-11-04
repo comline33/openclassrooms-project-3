@@ -1,7 +1,8 @@
 @use '../helpers/variables';// import variables 
 @use '../helpers/mixins';// import  mixins 
 
-.like-heart{ // heeart icon in all pages 
+// icon heart  in all page
+.like-heart{ 
     .fa-heart {
         position: absolute;
         font-size: 22px;
@@ -22,3 +23,41 @@
         opacity: 0;
     }
 }
+// animation icone texte plate in all pages 
+.global-rectangle{ 
+    .tooltip-box{
+        height: 100%;
+        display: flex;
+        gap: 15px;
+        .price{
+            margin:auto;
+            margin-right: -53px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: 1.5s;
+        }
+        .icone-save {
+            opacity: 0;
+            width: 60px;
+            height: 100%;
+        }
+    }
+    &:hover {  
+        .icone-save{ 
+            animation-name: icon-plate-aparition;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+        .price{
+            margin-right: 0 ;
+        }
+        .name-plat{
+            @include mixins.text-over-flow;// hide texte title plat in hover icon
+        }
+        .detail-plat  {
+            @include mixins.text-over-flow; // hide texte plat in hover icon
+        }
+    }
+
+}
+
