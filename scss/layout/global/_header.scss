@@ -1,0 +1,40 @@
+
+@use '../../helpers/variables' ;// import variables
+@use '../../helpers/mixins' ;// import mixins 
+header{
+    display: flex; 
+    height: 63px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 14px 89px 13px 89px;
+    z-index: 2;
+    box-shadow: variables.$main-box-shadow;
+    .logo{
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (min-width: 819px) {// medium media
+    .logo{
+        .fa-arrow-left{
+            right: 280px;
+        }
+    }
+}
+
+@media(min-width: 1180px) { // larg media
+    .logo{
+        .fa-arrow-left{
+            right: 460px;
+        }
+    }
+}
+@media(min-width: 1600px) { // extra larg media
+    .logo{
+        .fa-arrow-left{
+            right: 820px;
+        }
+    }
+}

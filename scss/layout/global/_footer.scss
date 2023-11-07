@@ -1,5 +1,6 @@
 @use '../../helpers/variables';// import variables
 @use '../../helpers/mixins';// import mixins
+
 .footer{
     height: auto;
     @extend %main-flex;
@@ -27,6 +28,35 @@
         }
         .contact-footer a{
             color: white ;
+        }
+    }
+}
+
+@media (min-width: 820px){ // medium media
+    .footer{
+        flex-direction: row-reverse;
+        .footer-list{
+            display: flex;
+            width: 100%;
+            align-items: flex-end;
+            .contact-footer{
+                position: relative;
+                left: -62px;
+                a{
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1180px){// larg  media
+    .footer{
+        .footer-list{
+            width: 60%;
+            .contact-footer{
+                left: -62px;
+            }
         }
     }
 }

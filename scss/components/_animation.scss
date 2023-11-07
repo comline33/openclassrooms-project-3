@@ -26,7 +26,7 @@
 @include mixins.keyF(card-aparition-traslate-v){// animation card verticfal aparition 
     0%{
        opacity: 0;
-       transform: translatey(-50px);
+       transform: translateY(-50px);
     }
     50%{
         opacity: 0.2; 
@@ -52,15 +52,13 @@
 }
 
 @include mixins.keyF(icon-plate-aparition){// animation green rectangle icon plat  
-    0%{  
-    transform: translateX(150px);
+    0%{
+        opacity: 0; 
+        width: 0;
     }
-    99%{  
-        opacity: 0.8;
-        }
 
     100%{
         opacity: 1;
-        transform: translateX(0)
+        width: 61px;
      }
 }

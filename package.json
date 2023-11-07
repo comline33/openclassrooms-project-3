@@ -1,12 +1,18 @@
 {
   "name": "peoject-openclassrooms",
-  "version": "1.0.0",
   "description": "use widht sass",
   "main": "index.js",
   "scripts": {
-    "sass": "sass  scss/main.scss:css/main.css --no-source-map -w",
-    "comp": "sass  scss/main.scss:css/main.scss --style=compressed --no-source-map -w"
+    "sass": "sass  scss/main.scss:css/main.css  scss/restaurent.scss:css/restaurent.css --no-source-map -w",
+    "comp": "sass  scss/main.scss:css/main.css --style=compressed --no-source-map"
+
+    
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "version": "1.0.0",
+  "dependencies": {
+    "xyz": "^4.0.0"
+  },
+  "devDependencies": {}
 }

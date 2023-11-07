@@ -11,6 +11,7 @@ header{
     img{
         width: 100%;
         height: 275px;
+        border-radius:0;
     }
     .card-menu-command{
         @extend %main-flex;// make a div in order column flex 
@@ -91,5 +92,51 @@ header{
             }
         }
     }
+    
+}
+
+@media (min-width:768px){ //  medium media
+    .card-plat{
+        .card-title{
+            margin-left: 39px !important;
+        }
+    }
+    .fa-arrow-left{
+        right:280px;
+    }
+}
+
+@media (min-width:820px) { // medium media
+    .card-content-plat{
+        width: 80%;
+        align-items: center; 
+        align-self: center;
+        .title-menu{
+            margin: 0;
+            justify-content: center;
+        }
+    }
+    .card-plat{
+        width: 80%;
+    }
+}
+
+@media (min-width:992px) { // larg media
+    .card-plat{
+        .card-title{
+            margin-left: 39px !important;
+        }
+    }
+}
+
+@media (min-width:1200px) { // larg width
+    .card-plat{
+        .card-title{
+            margin-left: 66px !important;
+        }
+    }
+    .new-card::after{
+            left: 85% !important;
+        }
     
 }

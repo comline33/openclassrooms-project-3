@@ -41,47 +41,59 @@
         @extend %main-flex;// make a div in order column flex
         padding: 0 18px 0 32px;  
         gap: variables.$exter-gap;
-        .filter-box{
-            counter-increment: number-box;
-            position: relative;
-            width: 100%;
-            display: flex;
-            justify-content: space-evenly;
-            align-self: center;
-            border-radius: 20px;
-            background:  variables.$main-bgr-color;
-            box-shadow: variables.$main-box-shadow;
-            padding: 20px;
-            transition: 0.5s;
-            cursor: pointer;
-            animation: card-aparition 1s !important;
-            .fa-color {
-                color: variables.$primary-color;
+        animation: card-aparition-traslate 2s ;
+        .filter{
+            @include mixins.display-col;
+            gap: variables.$exter-gap;
+            @include mixins.child-repeat-delay (3,0,0.1s){
+                animation: card-aparition-traslate 2s ;
             }
-            &:hover{
-                background-color: white;
+            .filter-box{
+                counter-increment: number-box;
+                position: relative;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-self: center;
+                border-radius: 20px;
+                background:  variables.$main-bgr-color;
+                box-shadow: variables.$main-box-shadow;
+                padding: 20px;
+                transition: 0.5s;
+                cursor: pointer;
+                animation: card-aparition 1s !important;
+                .fa-color {
+                    color: variables.$primary-color;
+                }
+                .fa-store{
+                    color: variables.$primary-color;
+                }
+                &:hover{
+                    background-color: white;
+                }
+                &:hover .fa-hover{
+                    color: variables.$primary-color ;
+                }
             }
-            &:hover .fa-hover{
-                color: variables.$primary-color ;
+            .title-bloc{
+                margin-left: -10px;
+            }
+            .filter-box::before{
+                content: counter(number-box);
+                position: absolute;
+                left:-15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                background-color: variables.$primary-color;
+                color: white;
+                font-size: 16px;
             }
         }
-        .title-bloc{
-            margin-left: -10px;
-        }
-        .filter-box::before{
-            content: counter(number-box);
-            position: absolute;
-            left:-15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            width: 24px;
-            height: 24px;
-            background-color: variables.$primary-color;
-            color: white;
-            font-size: 16px;
-        }
+        
     }
     .favorate-menu{
         background-color:variables.$main-bgr-color;
@@ -142,6 +154,119 @@
                     font-weight: 700;
                 }
             }
+        }
+    }
+}
+
+@media (min-width :820px) { // medium media
+    .main-container{
+        .filters-bloc{
+            gap: variables.$inter-gap;
+            padding: 0 70px;
+            .title-bloc{
+                font-size: 20px;
+            }
+            .filter{
+                flex-direction: row ;
+                gap: 20px;
+                .filter-box{
+                    padding: 10px;
+                    h3{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        .favorate-menu{
+            align-items: stretch;
+            gap: 18px;
+            padding: 30px 70px;
+            .card-box{
+                flex-direction: row ;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 50px;
+                .card{
+                    position: relative;
+                    gap: 30px;
+                    width: 45%;
+                    img{
+                        height: 120px;
+                    }
+                }
+                .new-card::after{
+                    left: 71% ;
+                }
+            } 
+        }
+    }
+}
+
+@media (min-width: 1180px) { // large medium media
+    .main-container{
+        .filters-bloc{
+            gap: variables.$inter-gap;
+            padding: 0 120px;
+            .title-bloc{
+                font-size: 20px;
+            }
+            .filter{
+                flex-direction: row ;
+                gap: 20px;
+                .filter-box{
+                    padding: 20px;
+                    justify-content: space-evenly;
+                    h3{
+                        font-size: 18px;
+                    }
+                    
+                }
+            }
+        }
+        .favorate-menu{
+            padding: 30px 120px;
+            .card-box{
+                gap: 50px;
+                .card{
+                    gap: 30px;
+                    width: 45%;
+                    img{
+                        height: 175px;
+                    }
+                }
+                .new-card::after{
+                    left: 75% ;
+                }
+            } 
+        }
+    }
+}
+@media (min-width: 1600px) { // extra larg media
+    .main-container{
+        .filters-bloc{
+            padding: 30px 180px;
+            .filter{
+                .filter-box{
+                    padding: 20px;
+                    justify-content: space-around
+                }
+            }
+        }
+        .favorate-menu{
+            padding: 30px 180px;
+            .card-box{
+                gap: 50px;
+                .card{
+                    gap: 30px;
+                    width: 45%;
+                    img{
+                        height: 250px;
+                    }
+                }
+                .new-card::after{
+                    margin-left: 50px;
+                }
+            } 
         }
     }
 }

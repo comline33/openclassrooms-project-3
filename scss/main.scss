@@ -9,12 +9,8 @@
 @use './components/icons';// import a icons styling 
 @use'./layout/home-pages/home-page';// import first pages of web site styling 
 @use'./layout/home-pages/loading';// import animation loading styling 
-@use'./layout/home-pages/header';// import header styling 
-@use'./layout/home-pages/footer';// import footer styling 
-@use'./layout/menus-pages/menus';// import pages menus  styling 
-@use'./media-layout/home-media'; // import home page media query styling 
-@use'./media-layout/media-menus';// import menus pages media query styling
-@use'./media-layout/footer-madia';// import footer media query styling
-@use'./media-layout/header-media';// import footer media query styling
+@use'./layout/global/header';// import header styling 
+@use'./layout/global/footer';// import footer styling 
+
 
 

@@ -34,18 +34,18 @@
             margin-right: -53px;
             font-weight: 700;
             font-size: 16px;
-            transition: 1.5s;
+            transition: 0.8s;
         }
         .icone-save {
             opacity: 0;
-            width: 60px;
+            width: 61px;
             height: 100%;
         }
     }
     &:hover {  
         .icone-save{ 
             animation-name: icon-plate-aparition;
-            animation-duration: 1s;
+            animation-duration: 0.8s;
             animation-fill-mode: forwards;
         }
         .price{
