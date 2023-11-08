@@ -643,7 +643,7 @@ header .logo {
   }
 }
 .footer {
-  z-index: 10;
+  z-index: 15;
   height: auto;
   gap: 16px;
   padding: 22px 22px;
@@ -656,6 +656,7 @@ header .logo {
   font-weight: 400;
 }
 .footer .footer-list {
+  z-index: 3000;
   width: 100%;
   line-height: 24px;
   font-size: 14px;
@@ -670,6 +671,7 @@ header .logo {
   margin-right: 8px;
 }
 .footer .footer-list .contact-footer a {
+  z-index: 20;
   color: white;
 }
 

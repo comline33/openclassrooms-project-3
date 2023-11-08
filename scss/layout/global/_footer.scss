@@ -2,7 +2,7 @@
 @use '../../helpers/mixins';// import mixins
 
 .footer{
-    z-index: 10;
+    z-index: 15 ;
     height: auto;
     @extend %main-flex;
     gap: 16px;
@@ -15,6 +15,7 @@
         font-weight: 400;
     }
     .footer-list{
+        z-index: 3000 ;
         width: 100%;
         line-height: 24px;
         font-size: 14px;
@@ -28,6 +29,7 @@
             margin-right: 8px;
         }
         .contact-footer a{
+            z-index: 20;
             color: white ;
         }
     }
