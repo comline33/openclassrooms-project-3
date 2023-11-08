@@ -21,7 +21,7 @@
             position: absolute;
             @include mixins.circle(200px);
             background: variables.$Bg-color-loader;
-            @include mixins.child-repeat-blur(4,10px,20px);
+            @include mixins.child-repeat-blur(3,10px,10px);
         }
         &:after {
             content: '';
