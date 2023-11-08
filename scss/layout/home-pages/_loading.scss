@@ -9,14 +9,14 @@
     right: 0;
     left: 0;
     background: black;
-    z-index: 50;
-    animation: fade-in 2s forwards ;
+    z-index: 10;
+    animation: fade-in 3s  forwards;
+    opacity: 1;
     .loader {
-       
+        position:absolute;
         @include mixins.circle(200px);
         background: variables.$Bg-color-loader;
         animation: spin 1 2s linear ;
-        z-index: 50 !important;
         span {
             position: absolute;
             @include mixins.circle(200px);

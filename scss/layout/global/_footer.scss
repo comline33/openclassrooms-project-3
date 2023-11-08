@@ -2,6 +2,7 @@
 @use '../../helpers/mixins';// import mixins
 
 .footer{
+    z-index: 10;
     height: auto;
     @extend %main-flex;
     gap: 16px;

@@ -25,16 +25,21 @@
 }
 // animation icone texte plate in all pages 
 .global-rectangle{ 
+    transition-property: all;
+  transition-duration: 4s;
+  transition-delay: 2s;
     .tooltip-box{
+        transition-property: all;
+        position: relative;
         height: 100%;
         display: flex;
+        align-items: center;
         gap: 15px;
         .price{
-            margin:auto;
-            margin-right: -53px;
+            transition-property: all;
+            position: absolute;
             font-weight: 700;
             font-size: 16px;
-            transition: 0.8s;
         }
         .icone-save {
             opacity: 0;
@@ -42,14 +47,17 @@
             height: 100%;
         }
     }
-    &:hover {  
+    &:hover { 
+        transition-property: all;
         .icone-save{ 
             animation-name: icon-plate-aparition;
             animation-duration: 0.8s;
             animation-fill-mode: forwards;
         }
         .price{
-            margin-right: 0 ;
+            animation-name: price-right;
+            animation-duration: 0.8s;
+            animation-fill-mode: forwards;
         }
         .name-plat{
             @include mixins.text-over-flow;// hide texte title plat in hover icon

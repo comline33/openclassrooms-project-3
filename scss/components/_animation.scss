@@ -1,40 +1,29 @@
 @use '../helpers/variables' ;// import variables
 @use '../helpers/mixins' ;// import variables 
 
-@include mixins.keyF(spin){ // rotation border for loader 
-    0%{
-        transform: rotate(0deg) ;
+@include mixins.keyF(fade-in){ // create a back body
+    
+    50%{
+        opacity: 0.8;
     }
-    100%{
-        transform: rotate(360deg) ;
-    }
-}
-
-@include mixins.keyF(fade-in){ // create a back body 
-    0%{
-        opacity: 1;
-    }
-    80%{
-        opacity: 0.3;
+    90%{
+        opacity: 0.5;
     }
     99%{
-        opacity: 0.1;
+        z-index: 20;
     }
     100%{
         opacity: 0;
-        display: none;
-        z-index: 0;
-    }   
+        z-index: 1;
+    }
 }
 
 @include mixins.keyF(card-aparition-traslate-v){// animation card verticfal aparition 
     0%{
-       opacity: 0;
+       
        transform: translateY(-50px);
     }
-    50%{
-        opacity: 0.2; 
-     }
+    
     100%{ 
         transform: translateY(0);
      }
@@ -64,5 +53,14 @@
     100%{
         opacity: 1;
         width: 61px;
+     }
+}
+@include mixins.keyF(price-right){// animation green rectangle icon plat  
+    0%{
+        right: 20px;
+     }
+    
+     100%{
+        right: 75px;
      }
 }

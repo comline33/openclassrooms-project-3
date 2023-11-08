@@ -89,61 +89,39 @@ img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
-@-webkit-keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @-webkit-keyframes fade-in {
-  0% {
-    opacity: 1;
+  50% {
+    opacity: 0.8;
   }
-  80% {
-    opacity: 0.3;
+  90% {
+    opacity: 0.5;
   }
   99% {
-    opacity: 0.1;
+    z-index: 20;
   }
   100% {
     opacity: 0;
-    display: none;
-    z-index: 0;
+    z-index: 1;
   }
 }
 @keyframes fade-in {
-  0% {
-    opacity: 1;
+  50% {
+    opacity: 0.8;
   }
-  80% {
-    opacity: 0.3;
+  90% {
+    opacity: 0.5;
   }
   99% {
-    opacity: 0.1;
+    z-index: 20;
   }
   100% {
     opacity: 0;
-    display: none;
-    z-index: 0;
+    z-index: 1;
   }
 }
 @-webkit-keyframes card-aparition-traslate-v {
   0% {
-    opacity: 0;
     transform: translateY(-50px);
-  }
-  50% {
-    opacity: 0.2;
   }
   100% {
     transform: translateY(0);
@@ -151,11 +129,7 @@ img {
 }
 @keyframes card-aparition-traslate-v {
   0% {
-    opacity: 0;
     transform: translateY(-50px);
-  }
-  50% {
-    opacity: 0.2;
   }
   100% {
     transform: translateY(0);
@@ -209,6 +183,22 @@ img {
     width: 61px;
   }
 }
+@-webkit-keyframes price-right {
+  0% {
+    right: 20px;
+  }
+  100% {
+    right: 75px;
+  }
+}
+@keyframes price-right {
+  0% {
+    right: 20px;
+  }
+  100% {
+    right: 75px;
+  }
+}
 .btn {
   display: flex;
   align-items: center;
@@ -224,6 +214,7 @@ img {
   align-self: center;
   cursor: pointer;
   transition-duration: 0.2s;
+  z-index: 5;
 }
 .btn:hover {
   filter: brightness(1.1);
@@ -250,22 +241,32 @@ img {
   opacity: 0;
 }
 
+.global-rectangle {
+  transition-property: all;
+  transition-duration: 4s;
+  transition-delay: 2s;
+}
 .global-rectangle .tooltip-box {
+  transition-property: all;
+  position: relative;
   height: 100%;
   display: flex;
+  align-items: center;
   gap: 15px;
 }
 .global-rectangle .tooltip-box .price {
-  margin: auto;
-  margin-right: -53px;
+  transition-property: all;
+  position: absolute;
   font-weight: 700;
   font-size: 16px;
-  transition: 0.8s;
 }
 .global-rectangle .tooltip-box .icone-save {
   opacity: 0;
   width: 61px;
   height: 100%;
+}
+.global-rectangle:hover {
+  transition-property: all;
 }
 .global-rectangle:hover .icone-save {
   animation-name: icon-plate-aparition;
@@ -273,7 +274,9 @@ img {
   animation-fill-mode: forwards;
 }
 .global-rectangle:hover .price {
-  margin-right: 0;
+  animation-name: price-right;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
 }
 .global-rectangle:hover .name-plat {
   overflow: hidden;
@@ -285,6 +288,7 @@ img {
 }
 
 .main-container {
+  z-index: 10;
   gap: 50px;
 }
 .main-container .reservation-bloc {
@@ -295,6 +299,7 @@ img {
   background: #F6F6F6;
 }
 .main-container .reservation-bloc .location-form {
+  z-index: 10;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -320,9 +325,10 @@ img {
   padding: 0 30px;
 }
 .main-container .filters-bloc {
+  z-index: 10;
   padding: 0 18px 0 32px;
   gap: 50px;
-  animation: card-aparition-traslate 2s;
+  animation: card-aparition-traslate 3s;
 }
 .main-container .filters-bloc .filter {
   display: flex;
@@ -386,6 +392,7 @@ img {
   font-size: 16px;
 }
 .main-container .favorate-menu {
+  z-index: 10;
   background-color: #F6F6F6;
   gap: 20px;
   padding: 18px;
@@ -421,6 +428,7 @@ img {
   height: 231px;
 }
 .main-container .favorate-menu .card-box .card .card-content {
+  z-index: 15;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -564,16 +572,17 @@ img {
   right: 0;
   left: 0;
   background: black;
-  z-index: 50;
-  animation: fade-in 2s forwards;
+  z-index: 10;
+  animation: fade-in 3s forwards;
+  opacity: 1;
 }
 .fond .loader {
+  position: absolute;
   border-radius: 50%;
   width: 200px;
   height: 200px;
   background: linear-gradient(#9356DC, #99E2D0, #FF79DA);
   animation: spin 1 2s linear;
-  z-index: 50 !important;
 }
 .fond .loader span {
   position: absolute;
@@ -610,7 +619,7 @@ header {
   align-items: center;
   text-align: center;
   padding: 14px 89px 13px 89px;
-  z-index: 2;
+  z-index: 10;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
 header .logo {
@@ -634,6 +643,7 @@ header .logo {
   }
 }
 .footer {
+  z-index: 10;
   height: auto;
   gap: 16px;
   padding: 22px 22px;
