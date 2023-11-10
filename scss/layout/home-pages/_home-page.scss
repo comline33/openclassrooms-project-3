@@ -2,7 +2,6 @@
 @use '../../helpers/mixins' ;// import mixins 
 @use '../../base/img' ;// import style image
 .main-container{
-    z-index: 10;
     @extend %main-flex;//make a vertical div 
     gap: variables.$exter-gap;
     .reservation-bloc{
@@ -13,7 +12,6 @@
         text-align: center;
         background: variables.$main-bgr-color;
         .location-form{
-            z-index: 10;
             @extend %main-flex;//make a vertical div 
             align-items: center;
             justify-content: center;
@@ -99,7 +97,6 @@
         
     }
     .favorate-menu{
-        z-index: 10;
         background-color:variables.$main-bgr-color;
         @extend %main-flex;// make a div in order column flex  
         gap: variables.$inter-gap;
